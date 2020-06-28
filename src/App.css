@@ -1,0 +1,82 @@
+.WeatherApp {
+  font-family: "Baloo Bhaina 2", cursive;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 6px;
+  padding: 6px 14px;
+  background-image: linear-gradient(
+    0,
+    rgba(143, 211, 244, 0.9) 0%,
+    rgba(132, 250, 176, 0.9) 100%
+  );
+}
+
+.WeatherApp p {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  text-align: left;
+}
+
+.WeatherApp h1,
+h3,
+i,
+p {
+  color: rgba(20, 40, 80, 1);
+}
+
+.WeatherApp .row {
+  margin: 10px 0;
+}
+
+.SearchForm .form-control {
+  margin: 0 0 0 12px;
+}
+
+.SearchForm .search-button {
+  margin: 0 0 0 15px;
+}
+
+.SearchForm i {
+  font-size: 22px;
+}
+
+.SearchForm i:hover {
+  color: rgba(20, 40, 80, 0.6);
+}
+
+.Weather h1 {
+  font-size: 45px;
+  display: inline;
+  line-height: 1;
+}
+
+.Weather h1 i {
+  margin: 0 10px 0 0px;
+  font-size: 30px;
+}
+
+.Weather h3 {
+  margin: 20px 0 0 20px;
+}
+
+.Weather .active {
+  cursor: default;
+  color: rgba(20, 40, 80, 1);
+}
+
+.Weather .active:hover {
+  text-decoration: none;
+  color: rgba(20, 40, 80, 1);
+}
+
+.Weather .units {
+  position: absolute;
+  margin-left: 5px;
+  top: -3px;
+}
+
+.Footer {
+  font-size: 16px;
+  text-align: center;
+}
