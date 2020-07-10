@@ -8,11 +8,6 @@ export default function SearchForm() {
   const [weather, setWeather] = useState({});
 
   function handleResponse(response) {
-    function formatString(string) {
-      string = string[0].toUpperCase() + string.slice(1).toLowerCase(); //making the first letter upper case and the rest lowercase
-      return string;
-    }
-
     function formatDate(timestamp) {
       let date = new Date(timestamp);
 
@@ -50,7 +45,7 @@ export default function SearchForm() {
       wind: Math.round(response.data.wind.speed * 3.6),
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      description: formatString(response.data.weather[0].description),
+      description: response.data.weather[0].description,
       city: response.data.name,
       feels_like: Math.round(response.data.main.feels_like),
       date: formatDate(response.data.dt * 1000),

@@ -31,7 +31,7 @@ export default function Weather(props) {
             </div>
           </div>
           <p>{props.date} </p>
-          <p>{props.description}</p>
+          <p class="text-capitalize">{props.description}</p>
         </div>
 
         <div className="col">
