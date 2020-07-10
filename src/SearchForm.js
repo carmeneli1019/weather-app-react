@@ -44,7 +44,7 @@ export default function SearchForm() {
       temperature: Math.round(response.data.main.temp),
       wind: Math.round(response.data.wind.speed * 3.6),
       humidity: response.data.main.humidity,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       city: response.data.name,
       feels_like: Math.round(response.data.main.feels_like),

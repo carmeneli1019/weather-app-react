@@ -1,14 +1,7 @@
 import React from "react";
-import ReactAnimatedWeather from "react-animated-weather";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Weather(props) {
-  const defaults = {
-    icon: "CLEAR_DAY",
-    color: "rgba(20, 40, 80, 1)",
-    size: 32,
-    animate: true,
-  };
-
   return (
     <div className="Weather">
       <div className="row">
@@ -18,12 +11,7 @@ export default function Weather(props) {
         <div className="col">
           <div className="clearfix">
             <div className="float-left">
-              <ReactAnimatedWeather
-                icon={defaults.icon}
-                color={defaults.color}
-                size={40}
-                animate={defaults.animate}
-              />
+              <WeatherIcon code={props.icon} />
               <h1>{props.temperature}</h1>
               <span className="units">
                 <a href="/">ºC </a>|<a href="/"> ºF</a>
@@ -31,7 +19,8 @@ export default function Weather(props) {
             </div>
           </div>
           <p>{props.date} </p>
-          <p class="text-capitalize">{props.description}</p>
+
+          <p className="text-capitalize">{props.description}</p>
         </div>
 
         <div className="col">
