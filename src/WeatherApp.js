@@ -8,7 +8,6 @@ export default function WeatherApp() {
     <div>
       <div className="WeatherApp">
         <SearchForm />
-        <Weather />
       </div>
       <Footer />
     </div>

@@ -1,17 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 
-export default function Weather() {
-  let weatherData = {
-    city: "Lisbon",
-    temperature: 23,
-    date: "Last updated: Tuesday, 15:10",
-    description: "Few clouds",
-    humidity: 56,
-    wind: 18,
-    feelsLike: 21,
-  };
-
+export default function Weather(props) {
   const defaults = {
     icon: "CLEAR_DAY",
     color: "rgba(20, 40, 80, 1)",
@@ -22,7 +12,7 @@ export default function Weather() {
   return (
     <div className="Weather">
       <div className="row">
-        <h3>{weatherData.city}</h3>
+        <h3>{props.city}</h3>
       </div>
       <div className="row">
         <div className="col">
@@ -35,21 +25,21 @@ export default function Weather() {
                 animate={defaults.animate}
               />
               <h1>
-                <span>{weatherData.temperature}</span>
+                <span>{Math.round(props.temperature)}</span>
               </h1>
               <span className="units">
                 <a href="/">ºC </a>|<a href="/"> ºF</a>
               </span>
             </div>
           </div>
-          <p>{weatherData.date}</p>
-          <p>{weatherData.description}</p>
+          <p>{props.date} </p>
+          <p>{props.description}</p>
         </div>
 
         <div className="col">
-          <p>Wind: {weatherData.wind} km/h</p>
-          <p>Humidity: {weatherData.humidity}%</p>
-          <p>Feels like: {weatherData.feelsLike} ºC</p>
+          <p>Wind: {Math.round(props.wind * 3.6)} km/h</p>
+          <p>Humidity: {props.humidity}%</p>
+          <p>Feels like: {Math.round(props.feels_like)} ºC</p>
         </div>
       </div>
     </div>
