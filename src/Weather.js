@@ -24,9 +24,7 @@ export default function Weather(props) {
                 size={40}
                 animate={defaults.animate}
               />
-              <h1>
-                <span>{Math.round(props.temperature)}</span>
-              </h1>
+              <h1>{props.temperature}</h1>
               <span className="units">
                 <a href="/">ºC </a>|<a href="/"> ºF</a>
               </span>
@@ -37,9 +35,9 @@ export default function Weather(props) {
         </div>
 
         <div className="col">
-          <p>Wind: {Math.round(props.wind * 3.6)} km/h</p>
+          <p>Wind: {props.wind} km/h</p>
           <p>Humidity: {props.humidity}%</p>
-          <p>Feels like: {Math.round(props.feels_like)} ºC</p>
+          <p>Feels like: {props.feels_like} ºC</p>
         </div>
       </div>
     </div>

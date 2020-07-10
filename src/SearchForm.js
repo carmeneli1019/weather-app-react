@@ -46,13 +46,13 @@ export default function SearchForm() {
 
     setLoaded(true);
     setWeather({
-      temperature: response.data.main.temp,
-      wind: response.data.wind.speed,
+      temperature: Math.round(response.data.main.temp),
+      wind: Math.round(response.data.wind.speed * 3.6),
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: formatString(response.data.weather[0].description),
       city: response.data.name,
-      feels_like: response.data.main.feels_like,
+      feels_like: Math.round(response.data.main.feels_like),
       date: formatDate(response.data.dt * 1000),
     });
   }
