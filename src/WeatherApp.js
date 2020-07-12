@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import Loader from "react-loader-spinner";
 
 export default function WeatherApp(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -98,6 +99,18 @@ export default function WeatherApp(props) {
     );
   } else {
     searchCity();
-    return <div>{form}</div>;
+    return (
+      <div>
+        {form}
+        <div class="d-flex justify-content-center">
+          <Loader
+            type="ThreeDots"
+            color="rgba(20, 40, 80, 1)"
+            height={50}
+            width={50}
+          />
+        </div>
+      </div>
+    );
   }
 }
