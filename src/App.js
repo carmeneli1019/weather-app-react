@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <div className="App">
-        <WeatherApp defaultCity="New York" />
+        <WeatherApp defaultCity="Lisbon" />
       </div>
       <footer className="footer">
         <a href="https://github.com/carmeneli1019/weather-app-react" target="#">
