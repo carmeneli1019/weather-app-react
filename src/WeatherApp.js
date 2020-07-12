@@ -9,7 +9,7 @@ export default function WeatherApp(props) {
   let units = "metric";
   const apiKey = "09136c24d8444755f87419ea9e97055a";
 
-  function search() {
+  function searchCity() {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -31,25 +31,24 @@ export default function WeatherApp(props) {
   function handleSubmit(event) {
     event.preventDefault();
     event.target.reset();
-    search();
+    searchCity();
   }
 
   function updateCity(event) {
     setCity(event.target.value);
   }
 
-  //***************************************** */
   function handlePosition(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
+    setCity(null);
   }
 
   function searchCurrentLocation() {
     navigator.geolocation.getCurrentPosition(handlePosition);
   }
-  //*********************************************** */
 
   let form = (
     <form className="WeatherApp" onSubmit={handleSubmit}>
@@ -98,7 +97,7 @@ export default function WeatherApp(props) {
       </div>
     );
   } else {
-    search();
+    searchCity();
     return <div>{form}</div>;
   }
 }
