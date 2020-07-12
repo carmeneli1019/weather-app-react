@@ -6,7 +6,10 @@ export default function Footer() {
       <a href="https://github.com/carmeneli1019/weather-app-react" target="#">
         Open-source code
       </a>{" "}
-      by Carmen Rosales{" "}
+      by Carmen Rosales,{" "}
+      <a href="https://frosty-kirch-dc02ac.netlify.app/" target="#">
+        hosted on Netlify
+      </a>
       <span role="img" aria-label="woman coding">
         👩‍💻
       </span>
