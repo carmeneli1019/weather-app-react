@@ -29,44 +29,44 @@ p {
   margin: 10px 0;
 }
 
-.SearchForm .form-control {
+.WeatherApp .form-control {
   margin: 0 0 0 12px;
 }
 
-.SearchForm .search-button {
+.WeatherApp .search-button {
   margin: 0 0 0 15px;
 }
 
-.SearchForm i {
+.WeatherApp i {
   font-size: 22px;
 }
 
-.SearchForm i:hover {
+.WeatherApp i:hover {
   color: rgba(20, 40, 80, 0.6);
 }
 
-.Weather h1 {
+.WeatherInfo h1 {
   font-size: 55px;
   display: inline;
   line-height: 1;
   margin: 0 0 0 10px;
 }
 
-.Weather h3 {
+.WeatherInfo h3 {
   margin: 20px 0 0 20px;
 }
 
-.Weather .active {
+.WeatherInfo .active {
   cursor: default;
   color: rgba(20, 40, 80, 1);
 }
 
-.Weather .active:hover {
+.WeatherInfo .active:hover {
   text-decoration: none;
   color: rgba(20, 40, 80, 1);
 }
 
-.Weather .units {
+.WeatherInfo .units {
   position: absolute;
   margin-left: 5px;
   top: -3px;

@@ -4,7 +4,7 @@ import WeatherTemperature from "./WeatherTemperature";
 import WeatherForecast from "./WeatherForecast";
 import FormattedTime from "./FormattedTime";
 
-export default function Weather(props) {
+export default function WeatherInfo(props) {
   function formatDate(timestamp) {
     let date = new Date(timestamp);
 
@@ -23,7 +23,7 @@ export default function Weather(props) {
   }
 
   return (
-    <div className="Weather">
+    <div className="WeatherInfo">
       <div className="row">
         <h3>{props.city}</h3>
       </div>

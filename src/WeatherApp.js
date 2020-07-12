@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Weather from "./Weather";
+import WeatherInfo from "./WeatherInfo";
 
-export default function SearchForm(props) {
+export default function WeatherApp(props) {
   let [city, setCity] = useState(props.defaultCity);
   const [loaded, setLoaded] = useState(false);
   const [weather, setWeather] = useState({});
@@ -37,7 +37,7 @@ export default function SearchForm(props) {
   }
 
   let form = (
-    <form className="SearchForm" onSubmit={handleSubmit}>
+    <form className="WeatherApp" onSubmit={handleSubmit}>
       <div className="row no-gutters">
         <div className="col-6">
           <input
@@ -66,7 +66,7 @@ export default function SearchForm(props) {
     return (
       <div>
         {form}
-        <Weather
+        <WeatherInfo
           temperature={weather.temperature}
           description={weather.description}
           humidity={weather.humidity}
