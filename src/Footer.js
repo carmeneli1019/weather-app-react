@@ -8,7 +8,7 @@ export default function Footer() {
       </a>{" "}
       by Carmen Rosales,{" "}
       <a href="https://frosty-kirch-dc02ac.netlify.app/" target="#">
-        hosted on Netlify
+        hosted on Netlify{" "}
       </a>
       <span role="img" aria-label="woman coding">
         👩‍💻

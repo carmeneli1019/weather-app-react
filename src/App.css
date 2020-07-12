@@ -1,4 +1,4 @@
-.WeatherApp {
+.App {
   font-family: "Baloo Bhaina 2", cursive;
   margin: 20px auto;
   max-width: 700px;
@@ -11,21 +11,21 @@
   );
 }
 
-.WeatherApp p {
+.App p {
   font-size: 18px;
   line-height: 26px;
   margin: 0;
   text-align: left;
 }
 
-.WeatherApp h1,
+.App h1,
 h3,
 i,
 p {
   color: rgba(20, 40, 80, 1);
 }
 
-.WeatherApp .row {
+.App .row {
   margin: 10px 0;
 }
 

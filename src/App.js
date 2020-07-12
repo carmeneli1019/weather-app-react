@@ -1,11 +1,15 @@
 import React from "react";
-import WeatherApp from "./WeatherApp.js";
+import SearchForm from "./SearchForm";
+import Footer from "./Footer";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <WeatherApp />
+    <div>
+      <div className="App">
+        <SearchForm defaultCity="New York" />
+      </div>
+      <Footer />
     </div>
   );
 }

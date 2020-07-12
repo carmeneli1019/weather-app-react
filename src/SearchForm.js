@@ -2,43 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import Weather from "./Weather";
 
-export default function SearchForm() {
-  let [city, setCity] = useState(null);
+export default function SearchForm(props) {
+  let [city, setCity] = useState(props.defaultCity);
   const [loaded, setLoaded] = useState(false);
   const [weather, setWeather] = useState({});
 
   function handleResponse(response) {
-    function formatDate(timestamp) {
-      let date = new Date(timestamp);
-
-      let weekDays = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ];
-
-      let weekDay = weekDays[date.getDay()];
-      let time = formatTime(timestamp);
-      return `Last updated: ${weekDay}, ${time}`;
-    }
-
-    function formatTime(timestamp) {
-      let date = new Date(timestamp);
-      let hours = date.getHours();
-      if (hours < 10) {
-        hours = `0${hours}`;
-      }
-      let minutes = date.getMinutes();
-      if (minutes < 10) {
-        minutes = `0${minutes}`;
-      }
-      return `${hours}:${minutes}`;
-    }
-
     setLoaded(true);
     setWeather({
       temperature: Math.round(response.data.main.temp),
@@ -48,7 +17,7 @@ export default function SearchForm() {
       description: response.data.weather[0].description,
       city: response.data.name,
       feels_like: Math.round(response.data.main.feels_like),
-      date: formatDate(response.data.dt * 1000),
+      date: response.data.dt * 1000,
     });
   }
 
