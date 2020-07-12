@@ -1,6 +1,7 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   return (
@@ -27,6 +28,7 @@ export default function Weather(props) {
           <p>Feels like: {props.feels_like} ºC</p>
         </div>
       </div>
+      <WeatherForecast city={props.city} units="metric" />
     </div>
   );
 }
